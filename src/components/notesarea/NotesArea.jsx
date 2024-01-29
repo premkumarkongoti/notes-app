@@ -9,7 +9,7 @@ const NotesArea = (props) => {
   const { groupSelect, groups, setGroups } = props;
   const [isTextEntered, setIsTextEntered] = useState(false);
 
-  let notes = groupSelect.notes; // Define 'notes' variable here
+  let notes = groupSelect.notes; 
 
   const getScreenSize = () => ({
     width: window.innerWidth,
@@ -115,13 +115,6 @@ const NotesArea = (props) => {
     ) : (
       <div className={notesStyles.notescontainer}>
         <div className={notesStyles.noteshead}>
-          <img
-            src={back}
-            alt={back}
-            onClick={() => {
-              window.location.reload();
-            }}
-          />
           <div className={notesStyles.notesgroup} style={{ background: groupSelect?.color }}>
             {typeof groupSelect?.groupName === 'string' && groupSelect.groupName.length > 0
               ? groupSelect.groupName

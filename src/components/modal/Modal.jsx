@@ -1,51 +1,40 @@
+
 import React, { useState, useEffect, useRef } from 'react';
-import modalStyles from './Modal.module.css'; // Import modalStyles
-// import styles from './Modal.module.css';
+import modelStyles from './Modal.module.css';
 
 const Modal = (props) => {
-  const [formData, setFormData] = useState({ grpName: '', color: '' });
+  const [formData, setFormData] = useState({ groupName: ' ', color: ' ' });
   const setGroups = props.setGroups;
   const groups = props.groups;
-  const { closeModal } = props;
+  const closeModal = props.closeModal;
+  const modalRef = useRef(null);
 
-  const modalContentRef = useRef(null);
+  const colorOptions = ['#B38BFA', '#FF79F2', '#43E6FC', '#F19576', '#0047FF', '#6691FF'];
 
-  const color = ['#B38BFA', '#FF79F2', '#43E6FC', '#F19576', '#0047FF', '#6691FF'];
+  const getScreenSize = () => ({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  const [screenSize, setScreenSize] = useState(getScreenSize());
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (modalContentRef.current && !modalContentRef.current.contains(event.target)) {
-        closeModal();
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
+    const handleResize = () => {
+      setScreenSize(getScreenSize());
+    };
+    window.addEventListener('resize', handleResize);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [closeModal]);
-
-  const getScreen = () => {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  };
-  const [screenSize, setScreenSize] = useState(getScreen());
-
-  useEffect(() => {
-    const Screen = () => {
-      setScreenSize(getScreen());
-    };
-    window.addEventListener('resize', Screen);
   }, []);
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
+    e.preventDefault();
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData.grpName);
+    console.log(formData.groupName);
   };
 
-  const handleChangeColor = (e) => {
+  const handleColorChange = (e) => {
+    e.preventDefault();
     setFormData({
       ...formData,
       [e.target.name]: e.target.getAttribute('color'),
@@ -54,14 +43,17 @@ const Modal = (props) => {
   };
 
   const handleSubmit = (e) => {
-    if (formData.color === '') {
-      alert('Please select a color');
+  //  if (formData.color === '') {
+    //  alert('Please select a color');
+     // return;
+     if (formData.groupName.trim() === '' || formData.color === '') {
+      alert('Please enter group name and select a color');
       return;
     }
-    let newGroup = [
+    const newGroup = [
       ...groups,
       {
-        groupName: formData.grpName,
+        groupName: formData.groupName,
         color: formData.color,
         notes: [],
         id: groups.length,
@@ -72,26 +64,40 @@ const Modal = (props) => {
     props.closeModal(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        closeModal(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [closeModal]);
+
   return (
     <>
-      {screenSize.width < 800 ? (
+      {screenSize.width < 989 ? (
         <>
-          <div className={modalStyles.modalmobile}>
-            <div className={modalStyles.modalcontainermobile}>
-              <h2 className={modalStyles.modalhead}>Create New Group</h2>
-              <label className={modalStyles.modalgroup}>Group Name</label>
+          <div className={modelStyles.modalmobile}>
+            <div className={modelStyles.modalcontainermobile} ref={modalRef}>
+              <h2 className={modelStyles.modalheadmobile}>Create New Group</h2>
+              <label className={modelStyles.modalgroupmobile}>Group Name</label>
               <input
                 type="text"
-                className={modalStyles.modaltextmobile}
-                name="grpName"
+                className={modelStyles.modaltextmobile}
+                name="groupName"
                 placeholder="Enter your group name"
-                onChange={handleChange}
+                onChange={handleInputChange}
               />
               <br />
-              <label className={modalStyles.modalcolor}>Choose Colour</label>
-              {color.map((color, index) => (
+              <label className={modelStyles.modalcolormobile}>Choose Colour</label>
+              {colorOptions.map((color, index) => (
                 <button
-                  className={`${modalStyles.colorbutton} ${
+                  className={`${modelStyles.colorbuttonmobile} ${
                     formData.color === color ? 'selected' : ''
                   }`}
                   name="color"
@@ -99,38 +105,38 @@ const Modal = (props) => {
                   key={index}
                   id={color}
                   style={{
-                    height: '40px',
-                    width: '40px',
+                    height: '20px',
+                    width: '20px',
                     background: color,
                     borderRadius: '25px',
                     border: 'none',
-                    marginRight: '10px',
+                    marginRight: '5px',
                   }}
-                  onClick={handleChangeColor}
+                  onClick={handleColorChange}
                 ></button>
               ))}
-              <button className={modalStyles.modalcreatemobile} onClick={handleSubmit}>
+              <button className={modelStyles.createbtn} onClick={handleSubmit}>
                 Create
               </button>
             </div>
           </div>
         </>
       ) : (
-        <div className={modalStyles.modal} ref={modalContentRef}>
-          <div className={modalStyles.modalcontainer}>
-            <h2 className={modalStyles.modalhead}>Create New Group</h2>
-            <label className={modalStyles.modalgroup}>Group Name</label>
+        <div className={modelStyles.modal}>
+          <div className={modelStyles.modalcontainer}  ref={modalRef}>
+            <h2 className={modelStyles.modalhead}>Create New Group</h2>
+            <label className={modelStyles.modalgroup}>Group Name</label>
             <input
               type="text"
-              className={modalStyles.modaltext}
-              name="grpName"
+              className={modelStyles.modaltext}
+              name="groupName"
               placeholder="Enter your group name"
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
-            <label className={modalStyles.modalcolor}>Choose Colour</label>
-            {color.map((color, index) => (
+            <label className={modelStyles.modalcolor}>Choose Colour</label>
+            {colorOptions.map((color, index) => (
               <button
-                className={`${modalStyles.colorbutton} ${
+                className={`${modelStyles.colorbutton} ${
                   formData.color === color ? 'selected' : ''
                 }`}
                 name="color"
@@ -145,10 +151,10 @@ const Modal = (props) => {
                   border: 'none',
                   marginRight: '10px',
                 }}
-                onClick={handleChangeColor}
+                onClick={handleColorChange}
               ></button>
             ))}
-            <button className={modalStyles.createbtn} onClick={handleSubmit}>
+            <button className={modelStyles.createbtn} onClick={handleSubmit}>
               Create
             </button>
           </div>
