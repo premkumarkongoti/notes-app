@@ -1,0 +1,250 @@
+.noteshead {
+    height: 58px;
+    background: 
+    #001F8B;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .notesgroup {
+    margin-left: 10px;
+    width: 68px;
+    height: 68px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  .groupname {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.48px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    
+  }
+  .notes{
+    overflow-y: auto;
+    height: 60vh;
+    background-color: #DAE5F5;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+  }
+ 
+  
+  .dateandtext {
+    display: flex;
+    background-color: white;
+    width: 997px;
+    height: 210px;
+    border-radius: 5px;
+    margin: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    
+  }
+  
+ .dateandtime{
+  display: flex;
+  position:absolute;
+  bottom:0;
+  right: 0;
+  padding-right: 20px;
+  
+  
+
+ }
+  
+  .text {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 20px;
+    margin-right: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    width: 1200px;
+    
+  }
+  
+  
+
+  .SendImgBlue{
+    color: 
+    #001F8B;
+  }
+
+  .textarea {
+     width: 79vw;
+    background-color: 
+    #001F8B;
+    overflow: hidden;
+    height: 199px;
+    
+    justify-content: center;
+  
+    }
+  
+  .textinput {
+    height: 18vh;
+    width: 66vw;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 9px;
+    resize: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.596px;
+    margin: 24px;
+    overflow: hidden;
+  }
+  .textinput::placeholder {
+    color: #9a9a9a;
+     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.596px;
+  }
+  
+  .sendimg {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    cursor: pointer;
+    fill: blue;
+    
+  }
+  .timemobile {
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 0px;
+    color: #353535;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 97%;
+    letter-spacing: 0.373px;
+    width: 10vh;
+    position: absolute;
+  }
+  .datemobile{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 25px;
+    color: #353535;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 97%;
+    letter-spacing: 0.373px;
+    position: absolute;
+  }
+  .sendimgmobile{
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    cursor: pointer;
+    
+  
+  }
+  
+  .textareamobile{
+    background-color: 
+    #001F8B;
+    width: 100vw;
+    
+    overflow: hidden;
+    height: 190px;
+    justify-content: center;
+  
+  }
+  .textinputmobile{
+    height: 18vh;
+    width: 320px;
+    padding-left: 20px;
+    padding-top: 20px;
+  
+    resize: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.596px;
+    margin: 15px;
+    
+    height: 132px;
+  
+
+    border-radius: 6px;
+
+  }
+  .textinputmobile::placeholder {
+    color: #9a9a9a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.596px;
+  }
+  .notesmobile{
+    overflow-y: auto;
+    height: 60vh;
+    background-color: #DAE5F5;
+    width: 410px;
+    
+  }
+  .textmobile{
+    display: flex;
+    margin-left: 38px;
+    margin-right: 20px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+  }
+  .notescontainer{
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  }
+  .dateandtextmobile {
+    display: flex;
+    background-color: white;
+    width: 320px;
+    height: 270px;
+    border-radius: 5px;
+    margin: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    flex-direction: column;
+    
+  }
+  .blue {
+    color: 
+    #001F8B;
+  }
+  

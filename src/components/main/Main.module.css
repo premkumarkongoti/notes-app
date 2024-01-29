@@ -1,0 +1,213 @@
+.sidebar{
+    width: 29%;
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-y: auto;
+  }
+  
+  .head{
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 0;
+    color: black;
+    position: fixed;
+    margin-left: 0px;
+    background-color: white;
+    width: 28%;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  .plus{
+    position: absolute;
+    bottom: 30px;
+    left: 325px;
+    height: 94px;
+    width: 94px;
+    background-color: #16008B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+  
+  .grouplist{
+    overflow-y: auto;
+    margin-top: 162px;
+  }
+  
+  .groupicon{
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .groupitem{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 100px;
+    
+  }
+  .groupitem.selected {
+    border-radius: 22px 22px;
+    background-color: #2F2F2F2B;
+  }
+  .groupitem:hover{
+    border-radius: 22px 22px;
+    background-color: #2F2F2F2B;
+  }
+  
+  .groupname{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.48px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  .messagearea{
+    background:#DAE5F5;
+    width: 72vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    bottom: 0;
+
+  }
+  
+  .messagetext{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .messageheading{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 58.59px;
+    letter-spacing: 2%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .messagedescription{
+    color: #292929;
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 2%;
+  }
+  .messagefooter{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 26%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    gap: 6px;
+  
+  }
+  
+  .sidebarmobile {
+    width: 100vw;
+    height: fit-content;
+    margin-left: 5px;
+    overflow-y: auto;
+
+    
+  }
+  
+  .CreateButtonMobile {
+    height: 41px;
+    width: inherit;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 97%;
+    letter-spacing: 0.54px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .headmobile {
+    color: #000;
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.63px;
+    padding-top: 40px;
+    margin-top: 0px;
+    color: black;
+    position: fixed;
+    margin-left: 0px;
+    background-color: white;
+    width: 28%;
+    height: 15%;
+    
+    text-align: center;
+    padding-left: 40px;
+    width: 75%;
+    height: 16%;
+    
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: gray;
+  }
+
+  .plusmobile{
+    position: fixed;
+    bottom: 30px;
+    left: 250px;
+    height: 94px;
+    width: 94px;
+    background-color: #16008B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+
+  

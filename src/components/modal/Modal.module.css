@@ -1,0 +1,255 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47, 47, 47, 0.75);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modalcontainer{
+    width: 590px;
+    height: 187px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 35px;
+  }
+  
+ 
+  
+  .modalhead{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 1.015px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .modalgroup{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.956px;
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+  
+  .modaltext{
+    width: 375px;
+    height: 35px;
+    border-radius: 22px;
+    border: 2px solid #ccc;
+    color: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modaltext::placeholder{
+    color: #979797;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.805px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .modalcolor{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.956px;
+    padding-left: 0px;
+    padding-right: 20px;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  .colorbutton{
+  cursor: pointer;
+  
+  }
+  .colorbutton:hover{
+    transform: translate3d(0px, -2px, 0px);
+  }
+  
+  .createbtn {
+    width: 154px;
+    height: 38px;
+    background: blue;
+    border-radius: 11px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.7px;
+    position: relative;
+    top: 10px;
+    left: 450px;
+    cursor: pointer;
+  }
+  
+  .modalmobile{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47, 47, 47, 0.75);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+  
+  .modalcontainermobile {
+    width: 300px;
+    height: fit-content;
+    max-width: 700px;
+    max-height: 700px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 35px;
+  }
+  .modaltextmobile{
+    width: 250px;
+    height: 35px;
+    border-radius: 22px;
+    border: 2px solid #ccc;
+    color: #000;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modaltextmobile::placeholder {
+    color: #979797;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.805px;
+  }
+  
+  .createbtnmobile{
+    width: 154px;
+    height: 38px;
+    float: right;
+    background: #000;
+    border-radius: 11px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+  }
+
+ .modalheadmobile{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 1.015px;
+    padding-top: 0px;
+    margin-top: 0px;
+
+  }
+  .modalgroupmobile{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.956px;
+    padding-left: 2px;
+    padding-right: 13px;
+  }
+  
+  .modaltextmobile{
+    width:150px;
+    height: 23px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    color: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modaltextmobile::placeholder{
+    color: #979797;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.805px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .modalcolormobile{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.956px;
+    padding-left: 3px;
+    padding-right: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .colorbuttonmobile{
+    cursor: pointer;
+  }
+  .colorbutton:hover{
+    transform: translate3d(0px, -2px, 0px);
+  }
+  
+  .modalcreatemobile{
+  
+    
+    background: blue;
+    border-radius: 11px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: 0.7px;
+  
+    margin-right: 55px;
+    cursor: pointer;
+    width: 186px;
+    height: 32px;
+    top: 400px;
+    left: 80px;
+  
+    border-radius: 6px;
+
+  }
+  
+  
