@@ -12,28 +12,10 @@ const Main = () => {
   const [groups, setGroups] = useState([]);
   const modalRef = useRef(null);
 
-  
-  const handleClickGroup = (group) => setGroupSelect(group);
 
-  const handleCloseModal = () => setOpenModal(false);
 
-  const handleClickOutsideModal = (event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
-      setOpenModal(false);
-    }
-  };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (openModal && modalRef.current && !modalRef.current.contains(event.target)) {
-        setOpenModal(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [openModal]);
-
-   const getScreenSize = () => ({
+  const getScreenSize = () => ({
     width: window.innerWidth,
     height: window.innerHeight,
   });
@@ -57,6 +39,28 @@ const Main = () => {
     fetchGroups();
   }, []);
 
+  
+  const handleClickGroup = (group) => setGroupSelect(group);
+
+  const handleCloseModal = () => setOpenModal(false);
+
+  const handleClickOutsideModal = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setOpenModal(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (openModal && modalRef.current && !modalRef.current.contains(event.target)) {
+        setOpenModal(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [openModal]);
+
+  
 
   return (
     <>
