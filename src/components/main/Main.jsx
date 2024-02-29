@@ -44,11 +44,11 @@ const Main = () => {
 
   const handleCloseModal = () => setOpenModal(false);
 
-  const handleClickOutsideModal = (event) => {
+  {/*const handleClickOutsideModal = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
       setOpenModal(false);
     }
-  };
+  };*/}
 
   useEffect(() => {
     const handleClickOutside = (event) => {
